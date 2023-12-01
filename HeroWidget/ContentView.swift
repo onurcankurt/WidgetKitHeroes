@@ -7,13 +7,14 @@
 
 import SwiftUI
 
+let superHeroArray = [spiderman, hulk, deadpool, batman, wolverine]
+
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            ForEach(superHeroArray){hero in
+                HeroView(hero: hero)
+            }
         }
         .padding()
     }
