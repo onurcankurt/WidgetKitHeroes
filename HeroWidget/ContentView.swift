@@ -31,7 +31,7 @@ struct ContentView: View {
         if let heroData = try? JSONEncoder().encode(hero) {
             self.heroData = heroData
             print(hero.name)
-        }  
+        }
     }
 }
 
