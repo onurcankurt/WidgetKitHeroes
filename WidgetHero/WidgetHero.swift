@@ -20,9 +20,10 @@ struct Provider: AppIntentTimelineProvider {
     func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
 //        SimpleEntry(date: Date(), configuration: configuration, hero: <#Superhero#>)
         
-        if let hero = try? JSONDecoder().decode(Superhero.self, from: heroData) {
-            let entry = SimpleEntry(date: Date(), configuration: configuration, hero: hero)
-        }
+//        if let hero = try? JSONDecoder().decode(Superhero.self, from: heroData) {
+//            let entry = SimpleEntry(date: Date(), configuration: configuration, hero: hero)
+//        }
+        SimpleEntry(date: Date(), configuration: configuration, hero: try! JSONDecoder().decode(Superhero.self, from: heroData) )
     }
     
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
@@ -32,7 +33,7 @@ struct Provider: AppIntentTimelineProvider {
 //        let currentDate = Date()
 //        for hourOffset in 0 ..< 5 {
 //            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-//            let entry = SimpleEntry(date: entryDate, configuration: configuration, hero: <#Superhero#>)
+//            let entry = SimpleEntry(date: Date(), configuration: configuration, hero: try! JSONDecoder().decode(Superhero.self, from: heroData))
 //            entries.append(entry)
 //        }
         if let hero = try? JSONDecoder().decode(Superhero.self, from: heroData) {
@@ -41,7 +42,7 @@ struct Provider: AppIntentTimelineProvider {
         }
         
 
-        return Timeline(entries: entries, policy: .atEnd)
+        return Timeline(entries: entries, policy: .never)
     }
 }
 
@@ -55,13 +56,7 @@ struct WidgetHeroEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
-        }
+        CircularImageView(image: Image(entry.hero.image))
     }
 }
 
@@ -69,10 +64,15 @@ struct WidgetHero: Widget {
     let kind: String = "WidgetHero"
 
     var body: some WidgetConfiguration {
+        
+        //StaticConfiguration
+        
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
             WidgetHeroEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
+        .configurationDisplayName("Widget Hero")
+        .description("Hero widget!!!")
     }
 }
 
@@ -91,8 +91,10 @@ extension ConfigurationAppIntent {
 }
 
 #Preview(as: .systemSmall) {
+    
     WidgetHero()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .smiley, hero: <#Superhero#>)
-    SimpleEntry(date: .now, configuration: .starEyes, hero: <#Superhero#>)
+    SimpleEntry(date: .now, configuration: .smiley, hero: try! JSONDecoder().decode(Superhero.self, from: Provider().heroData))
+                
+    SimpleEntry(date: .now, configuration: .starEyes, hero: try! JSONDecoder().decode(Superhero.self, from: Provider().heroData))
 }
