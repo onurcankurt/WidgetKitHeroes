@@ -12,6 +12,7 @@
 		7744BD302B18D7F2001F9A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7744BD2F2B18D7F2001F9A71 /* Assets.xcassets */; };
 		7744BD332B18D7F2001F9A71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7744BD322B18D7F2001F9A71 /* Preview Assets.xcassets */; };
 		7744BD3A2B18D98C001F9A71 /* Superhero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744BD392B18D98C001F9A71 /* Superhero.swift */; };
+		7744BD3C2B18DD1D001F9A71 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744BD3B2B18DD1D001F9A71 /* CircularImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		7744BD2F2B18D7F2001F9A71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7744BD322B18D7F2001F9A71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7744BD392B18D98C001F9A71 /* Superhero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Superhero.swift; sourceTree = "<group>"; };
+		7744BD3B2B18DD1D001F9A71 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				7744BD2F2B18D7F2001F9A71 /* Assets.xcassets */,
 				7744BD312B18D7F2001F9A71 /* Preview Content */,
 				7744BD392B18D98C001F9A71 /* Superhero.swift */,
+				7744BD3B2B18DD1D001F9A71 /* CircularImageView.swift */,
 			);
 			path = HeroWidget;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7744BD2E2B18D7F1001F9A71 /* ContentView.swift in Sources */,
+				7744BD3C2B18DD1D001F9A71 /* CircularImageView.swift in Sources */,
 				7744BD2C2B18D7F1001F9A71 /* HeroWidgetApp.swift in Sources */,
 				7744BD3A2B18D98C001F9A71 /* Superhero.swift in Sources */,
 			);
