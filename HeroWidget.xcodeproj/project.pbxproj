@@ -25,6 +25,7 @@
 		77A078062B1A24700057FE12 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A077E62B1A193A0057FE12 /* HeroView.swift */; };
 		77A078072B1A24770057FE12 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744BD3B2B18DD1D001F9A71 /* CircularImageView.swift */; };
 		77A078082B1A247A0057FE12 /* Superhero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744BD392B18D98C001F9A71 /* Superhero.swift */; };
+		77A078092B1A27910057FE12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7744BD2F2B18D7F2001F9A71 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		77A077FA2B1A24150057FE12 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		77A077FC2B1A24170057FE12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77A077FE2B1A24170057FE12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77A0780A2B1A27A40057FE12 /* WidgetHeroExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetHeroExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		7744BD1F2B18D7F1001F9A71 = {
 			isa = PBXGroup;
 			children = (
+				77A0780A2B1A27A40057FE12 /* WidgetHeroExtension.entitlements */,
 				7744BD2A2B18D7F1001F9A71 /* HeroWidget */,
 				77A077F32B1A24150057FE12 /* WidgetHero */,
 				77A077EE2B1A24150057FE12 /* Frameworks */,
@@ -246,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A078092B1A27910057FE12 /* Assets.xcassets in Resources */,
 				77A077FD2B1A24170057FE12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +480,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetHeroExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 24F98Z3S44;
@@ -503,6 +508,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = WidgetHeroExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 24F98Z3S44;
